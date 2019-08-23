@@ -1,0 +1,41 @@
+{
+  "__firefox__applications": {
+    "gecko": {
+      "id": "{d3941a68-16f0-41f4-a4be-2e699e0e9517}"
+    }
+  },
+  "author": "PrivacyCloud",
+  "name": "Consent Manager",
+  "short_name": "Consent Manager",
+  "description": "__MSG_manifestDescription__",
+  "version": "2.1.1",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": true
+  },
+  "icons": {
+    "16": "images/grey_16.png",
+    "32": "images/grey_32.png",
+    "64": "images/grey_64.png",
+    "128": "images/grey_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Consent Manager by PrivacyCloud",
+    "default_popup": "pages/popup.html",
+    "default_icon": {
+      "16": "images/grey_16.png",
+      "32": "images/grey_32.png",
+      "64": "images/grey_64.png",
+      "128": "images/grey_128.png"
+    }
+  },
+  "permissions": ["<all_urls>", "cookies", "storage", "tabs", "webRequest", "webRequestBlocking"]
+}

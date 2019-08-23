@@ -1,0 +1,55 @@
+{
+  "name": "consent-manager-web-ext",
+  "version": "2.1.1",
+  "description": "Consent Manager: Removes most cookie banners and declines consent by omission",
+  "author": {
+    "email": "developers@privacycloud.com",
+    "name": "PrivacyCloud",
+    "url": "https://privacycloud.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "webextension-toolbox build",
+    "dev": "webextension-toolbox dev",
+    "lint": "eslint .",
+    "prepush": "yarn lint && yarn typecheck && yarn test",
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@privacycloud/prettierrc": "^2.0.0",
+    "@types/jest": "24.0.17",
+    "@types/jsdom": "^12.2.4",
+    "@types/lodash": "^4.14.136",
+    "@types/node": "^12.7.1",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^24.8.0",
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "^5.2.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-jest": "^21.22.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^0.14.3",
+    "jest": "^24.8.0",
+    "prettier": "^1.14.0",
+    "typescript": "^3.5.3",
+    "web-ext-types": "^3.2.1",
+    "webextension-toolbox": "^3.0.0"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "babel-plugin-emotion": "^10.0.14",
+    "lodash": "^4.17.15",
+    "parse-domain": "^2.1.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-md-spinner": "^1.0.0"
+  }
+}

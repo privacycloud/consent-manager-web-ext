@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<svg
+  height="512px"
+  width="512px"
+  version="1.1"
+  viewBox="0 0 512 512"
+  xml:space="preserve"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <polyline fill="none" points="175,256 218.5,309.6 337,202.4" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+  </g>
+</svg>

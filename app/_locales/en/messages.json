@@ -1,0 +1,51 @@
+{
+  "manifestDescription": {
+    "message": "Removes most cookie banners and declines consent by omission",
+    "description": "Manifest description key"
+  },
+
+  "popupSettingsCheck": {
+    "message": "Enable",
+    "description": "Check label"
+  },
+
+  "popupTitle": {
+    "message": "Consent Manager",
+    "description": "Title for the popup"
+  },
+
+  "popupSubtitle": {
+    "message": "Removes most cookie banners and declines consent by omission.",
+    "description": "First paragraph"
+  },
+
+  "howItWorks": {
+    "message": "A red icon indicates that 3rd party cookies are nonetheless being served.",
+    "description": "Second paragraph"
+  },
+
+  "popupReportText": {
+    "message": "You may report a non-compliant website at any time. Reported websites will be evaluated and listed on <a href=\"https://comply.org/\" target=\"_blank\">COMPLY.ORG</a>.",
+    "description": "Information text about reporting URLs"
+  },
+
+  "popupReportButton": {
+    "message": "Report this site to COMPLY.ORG",
+    "description": "Text for reporting button"
+  },
+
+  "popupErrorReportText": {
+    "message": "(FIX) ¿El plugin Consent Manager no ha eliminado el faldón de cookies o consentimiento en el sitio web que estás visitando? Por favor, pulsa el botón inferior para ayudarnos a mejorar.",
+    "description": "Information about what to do when the plugin is not working right"
+  },
+
+  "popupErrorReportButton": {
+    "message": "(FIX) Sigo viendo faldones en esta web",
+    "description": "Text for the error reporting button"
+  },
+
+  "footer": {
+    "message": "About <a target=\"_blank\" href=\"https://privacycloud.com\">PrivacyCloud</a>.",
+    "description": "A message for the footer"
+  }
+}

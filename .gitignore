@@ -1,0 +1,19 @@
+# Node
+node_modules/
+npm-debug.*
+yarn-error.log
+
+# Testing Framework
+coverage/
+
+# Make
+build
+dist/
+packages/
+
+# SO
+.vs/
+.DS_Store
+
+# Config
+.env
