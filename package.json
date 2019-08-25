@@ -30,7 +30,7 @@
     "babel-core": "^7.0.0-0",
     "babel-jest": "^24.8.0",
     "dotenv-webpack": "^1.7.0",
-    "eslint": "^5.2.0",
+    "eslint": "^6.2.2",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-jest": "^21.22.0",
     "eslint-plugin-prettier": "^2.6.2",
