@@ -1,12 +1,11 @@
-# consent-manager-web-ext
+# consent-manager-web-ext &middot; [![Build Status](https://travis-ci.org/privacycloud/consent-manager-web-ext.svg?branch=master)](https://travis-ci.org/privacycloud/consent-manager-web-ext) [![License](https://img.shields.io/github/license/privacycloud/consent-manager-web-ext?color=blue)](https://github.com/privacycloud/consent-manager-web-ext/blob/master/LICENSE)  <!-- omit in toc -->
 
-- [consent-manager-web-ext](#consent-manager-web-ext)
-  - [Development](#development)
-    - [Setup](#setup)
-    - [Run](#run)
-    - [Environment Configuration](#environment-configuration)
-    - [How to run tests](#how-to-run-tests)
-  - [How to build the project](#how-to-build-the-project)
+- [Development](#development)
+  - [Setup](#setup)
+  - [Run](#run)
+  - [Environment Configuration](#environment-configuration)
+  - [How to run tests](#how-to-run-tests)
+- [How to build the project](#how-to-build-the-project)
 
 ## Development
 
