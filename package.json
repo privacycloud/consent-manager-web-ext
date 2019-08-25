@@ -12,7 +12,6 @@
     "build": "webextension-toolbox build",
     "dev": "webextension-toolbox dev",
     "lint": "eslint .",
-    "prepush": "yarn lint && yarn typecheck && yarn test",
     "test": "jest",
     "test:watch": "yarn test --watch",
     "typecheck": "tsc --noEmit",
@@ -52,5 +51,10 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-md-spinner": "^1.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint && yarn typecheck && yarn test"
+    }
   }
 }
