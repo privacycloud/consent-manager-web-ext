@@ -15,7 +15,8 @@
     "prepush": "yarn lint && yarn typecheck && yarn test",
     "test": "jest",
     "test:watch": "yarn test --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "verify": "yarn lint && yarn typecheck"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
