@@ -38,7 +38,7 @@
     "eslint-plugin-react": "^7.14.2",
     "husky": "^0.14.3",
     "jest": "^24.8.0",
-    "prettier": "^1.14.0",
+    "prettier": "^1.18.2",
     "typescript": "^3.5.3",
     "web-ext-types": "^3.2.1",
     "webextension-toolbox": "^3.0.0"
