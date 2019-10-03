@@ -43,7 +43,7 @@
     "webextension-toolbox": "^3.0.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.16",
+    "@emotion/core": "^10.0.20",
     "babel-plugin-emotion": "^10.0.16",
     "lodash": "^4.17.15",
     "parse-domain": "^2.3.2",
