@@ -1,6 +1,6 @@
 {
   "name": "consent-manager-web-ext",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "description": "Consent Manager: Removes most cookie banners and declines consent by omission",
   "author": {
     "email": "developers@privacycloud.com",
