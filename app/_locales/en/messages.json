@@ -24,14 +24,9 @@
     "description": "Second paragraph"
   },
 
-  "popupReportText": {
-    "message": "You may report a non-compliant website at any time. Reported websites will be evaluated and listed on <a href=\"https://comply.org/\" target=\"_blank\">COMPLY.ORG</a>.",
-    "description": "Information text about reporting URLs"
-  },
-
-  "popupReportButton": {
-    "message": "Report this site to COMPLY.ORG",
-    "description": "Text for reporting button"
+  "contributing": {
+    "message": "The Consent Manager browser extension is a <a target=\"_blank\" href=\"https://privacycloud.com\">PrivacyCloud</a>-led open source project (MIT license). Contribute to it all through our <a target=\"_blank\" href=\"https://github.com/privacycloud/consent-manager-web-ext\">GitHub</a> page.",
+    "description": "How to contribute"
   },
 
   "popupErrorReportText": {
@@ -42,10 +37,5 @@
   "popupErrorReportButton": {
     "message": "(FIX) Sigo viendo faldones en esta web",
     "description": "Text for the error reporting button"
-  },
-
-  "footer": {
-    "message": "About <a target=\"_blank\" href=\"https://privacycloud.com\">PrivacyCloud</a>.",
-    "description": "A message for the footer"
   }
 }

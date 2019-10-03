@@ -1,17 +1,15 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
+import noop from 'lodash/noop';
+import PropTypes from 'prop-types';
+import { Fragment } from 'react';
+import { Features } from '../../../features';
 import { Button } from '../../components/Button';
 import { Check } from '../../components/Check';
-import { Features } from '../../../features';
-import { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import { Section } from './components/Section';
-import { Separator } from '../../components/Separator';
-import { Site } from '../../../entities';
 import { Subtitle } from '../../components/Subtitle';
 import { Text } from '../../components/Text';
 import { Title } from '../../components/Title';
-import noop from 'lodash/noop';
+import { Section } from './components/Section';
 
 const container = css`
   padding: 30px 20px 15px;
@@ -63,29 +61,14 @@ const withLink = css`
  *
  * @param {object} props
  * @param {boolean} props.isEnabled
- * @param {boolean} props.isReportingSite
  * @param {boolean} props.loading
- * @param {object} props.onReportingSiteClick
  * @param {object} props.onExtensionActivationChange
- * @param {boolean} props.siteHasBeenReported
- * @param {Site|null} props.site
  * @param {import('../../intl').t} props.t
  */
-export function MainPresentational({
-  isEnabled,
-  isReportingSite,
-  loading,
-  onReportingSiteClick,
-  onExtensionActivationChange,
-  siteHasBeenReported,
-  site,
-  t,
-}) {
+export function MainPresentational({ isEnabled, loading, onExtensionActivationChange, t }) {
   if (loading) {
     return null;
   }
-
-  const isReportingDisabled = siteHasBeenReported || !site || !site.hasThirdPartyCookies();
 
   return (
     <div css={container}>
@@ -99,28 +82,18 @@ export function MainPresentational({
       <Section>
         <Text css={display}>{t('howItWorks')}</Text>
 
-        <Text css={withLink} dangerouslySetInnerHTML={{ __html: t('popupReportText') }} />
+        <Text css={withLink} dangerouslySetInnerHTML={{ __html: t('contributing') }} />
 
-        <Button css={button} disabled={isReportingDisabled} loading={isReportingSite} onClick={onReportingSiteClick}>
-          {t('popupReportButton')}
-        </Button>
-      </Section>
-
-      {Features.isErrorReportingEnabled() && (
-        <Fragment>
-          <Separator />
-
-          <Section>
+        {Features.isErrorReportingEnabled() && (
+          <Fragment>
             <Text css={withLink} dangerouslySetInnerHTML={{ __html: t('popupErrorReportText') }} />
 
             <Button css={button} disabled={!isEnabled} onClick={noop}>
               {t('popupErrorReportButton')}
             </Button>
-          </Section>
-        </Fragment>
-      )}
-
-      <Text css={[footer, withLink]} dangerouslySetInnerHTML={{ __html: t('footer') }} />
+          </Fragment>
+        )}
+      </Section>
 
       <section css={check}>
         <Check checked={isEnabled} label={t('popupSettingsCheck')} onChange={onExtensionActivationChange} />
@@ -131,11 +104,7 @@ export function MainPresentational({
 
 MainPresentational.propTypes = {
   isEnabled: PropTypes.bool,
-  isReportingSite: PropTypes.bool,
   loading: PropTypes.bool,
-  onReportingSiteClick: PropTypes.func.isRequired,
   onExtensionActivationChange: PropTypes.func.isRequired,
-  siteHasBeenReported: PropTypes.bool,
-  site: PropTypes.instanceOf(Site),
   t: PropTypes.func.isRequired,
 };
