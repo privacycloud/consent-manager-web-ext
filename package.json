@@ -25,7 +25,7 @@
     "@types/jsdom": "^12.2.4",
     "@types/lodash": "^4.14.139",
     "@types/node": "^12.7.5",
-    "@types/react": "^16.9.2",
+    "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.0",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^24.9.0",
