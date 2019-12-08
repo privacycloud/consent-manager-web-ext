@@ -29,12 +29,6 @@ This will start a web server to provide hot-reloading functionality.
 
 ### Environment Configuration
 
-This project expects a `APP_HOST` environment variable to exist **at build time**. This can be configured via an `.env` file on the project's root directory. For example:
-
-```
-APP_HOST="http://localhost:3000" # change accordingly for production
-```
-
 `webextension-toolbox` automatically sets the `NODE_ENV` environment variable. The value for this variable will be `development` on development but it will be set to `production` on building time. See `webextension-toolbox` [documentation](https://github.com/webextension-toolbox/webextension-toolbox#usage) for more information about other environment variables or configuration details.
 
 The project has also support for [`dotenv`](https://github.com/motdotla/dotenv), so it is possible to add custom environment variables through existing `.env` configuration file.
@@ -47,10 +41,11 @@ yarn test
 
 ## How to build the project
 
-Depending on the target vendor:
+The supported Node version for this project is specified at `.nvmrc`. To build this application, please follow the next steps:
 
 ```sh
-yarn build <chrome|firefox|opera|edge>
+yarn # to install dependencies
+yarn build <chrome|firefox|opera|edge> # to choose the target vendor
 ```
 
 > NOTE: Since Safari extensions follows a completely different approach we are not supporting this browser at the moment.

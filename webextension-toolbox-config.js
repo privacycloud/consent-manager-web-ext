@@ -5,11 +5,7 @@ const dotenv = require('dotenv-webpack');
 
 module.exports = {
   webpack: (config) => {
-    config.plugins.push(
-      new dotenv({
-        safe: true,
-      }),
-    );
+    config.plugins.push(new dotenv());
 
     return config;
   },
