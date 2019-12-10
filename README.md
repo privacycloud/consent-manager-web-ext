@@ -1,13 +1,24 @@
 # consent-manager-web-ext &middot; [![Build Status](https://travis-ci.org/privacycloud/consent-manager-web-ext.svg?branch=master)](https://travis-ci.org/privacycloud/consent-manager-web-ext) [![License](https://img.shields.io/github/license/privacycloud/consent-manager-web-ext?color=blue)](https://github.com/privacycloud/consent-manager-web-ext/blob/master/LICENSE) <!-- omit in toc -->
 
+- [How to build the project](#how-to-build-the-project)
 - [Development](#development)
   - [Setup](#setup)
   - [Run](#run)
   - [Environment Configuration](#environment-configuration)
   - [How to run tests](#how-to-run-tests)
-- [How to build the project](#how-to-build-the-project)
 - [License](#license)
 - [Copyright](#copyright)
+
+## How to build the project
+
+The supported Node version for this project is specified at `.nvmrc`. To build this application, please follow the next steps:
+
+```sh
+yarn # to install dependencies
+yarn build <chrome|firefox|opera|edge> # to build for the target vendor
+```
+
+> NOTE: Since Safari extensions follows a completely different approach we are not supporting this browser at the moment.
 
 ## Development
 
@@ -38,17 +49,6 @@ The project has also support for [`dotenv`](https://github.com/motdotla/dotenv),
 ```sh
 yarn test
 ```
-
-## How to build the project
-
-The supported Node version for this project is specified at `.nvmrc`. To build this application, please follow the next steps:
-
-```sh
-yarn # to install dependencies
-yarn build <chrome|firefox|opera|edge> # to choose the target vendor
-```
-
-> NOTE: Since Safari extensions follows a completely different approach we are not supporting this browser at the moment.
 
 ## License
 
