@@ -18,6 +18,8 @@ yarn # to install dependencies
 yarn build <chrome|firefox|opera|edge> # to build for the target vendor
 ```
 
+The resulted artefact will be located at `./packages/consent-manager-web-ext.<version>.<vendor>.*.zip`.
+
 > NOTE: Since Safari extensions follows a completely different approach we are not supporting this browser at the moment.
 
 ## Development
