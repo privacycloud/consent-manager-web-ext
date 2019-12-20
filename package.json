@@ -38,7 +38,7 @@
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
-    "typescript": "^3.5.3",
+    "typescript": "^3.7.3",
     "web-ext-types": "^3.2.1",
     "webextension-toolbox": "^3.0.0"
   },
