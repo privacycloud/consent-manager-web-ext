@@ -1,15 +1,11 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import noop from 'lodash/noop';
-import PropTypes from 'prop-types';
-import { Fragment } from 'react';
-import { Features } from '../../../features';
-import { Button } from '../../components/Button';
 import { Check } from '../../components/Check';
+import PropTypes from 'prop-types';
+import { Section } from './components/Section';
 import { Subtitle } from '../../components/Subtitle';
 import { Text } from '../../components/Text';
 import { Title } from '../../components/Title';
-import { Section } from './components/Section';
 
 const container = css`
   padding: 30px 20px 15px;
@@ -30,20 +26,10 @@ const subtitle = css`
   margin-top: 0.5em;
 `;
 
-const button = css`
-  margin: 30px auto;
-  width: 345px;
-`;
-
 const check = css`
   position: absolute;
   right: 20px;
   top: 20px;
-`;
-
-const footer = css`
-  margin-top: 20px;
-  text-align: center;
 `;
 
 const display = css`
@@ -83,16 +69,6 @@ export function MainPresentational({ isEnabled, loading, onExtensionActivationCh
         <Text css={display}>{t('howItWorks')}</Text>
 
         <Text css={withLink} dangerouslySetInnerHTML={{ __html: t('contributing') }} />
-
-        {Features.isErrorReportingEnabled() && (
-          <Fragment>
-            <Text css={withLink} dangerouslySetInnerHTML={{ __html: t('popupErrorReportText') }} />
-
-            <Button css={button} disabled={!isEnabled} onClick={noop}>
-              {t('popupErrorReportButton')}
-            </Button>
-          </Fragment>
-        )}
       </Section>
 
       <section css={check}>

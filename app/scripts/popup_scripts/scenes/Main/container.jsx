@@ -1,8 +1,8 @@
+import { ExtensionManager } from '../../../managers/ExtensionManager';
+import { MainPresentational } from './presentational';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { ExtensionManager } from '../../../managers/ExtensionManager';
 import { withTranslation } from '../../intl';
-import { MainPresentational } from './presentational';
 
 /**
  * @typedef {object} Props
