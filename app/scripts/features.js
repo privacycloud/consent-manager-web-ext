@@ -1,5 +1,1 @@
-export const Features = {
-  isErrorReportingEnabled() {
-    return process.env.NODE_ENV !== 'production';
-  },
-};
+export const Features = {};

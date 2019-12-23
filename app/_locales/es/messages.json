@@ -16,12 +16,22 @@
 
   "popupSubtitle": {
     "message": "Elimina faldones de cookies y ejerce su no aceptación por omisión.",
-    "description": "First paragraph"
+    "description": "Subtitle for the popup"
   },
 
   "howItWorks": {
-    "message": "Un icono rojo denota que se están sirviendo cookies de 3a parte a pesar de su no aceptación.",
-    "description": "Second paragraph"
+    "message": "Activa la extensión para navegar sin faldones intrusivos.",
+    "description": "Short text explaining why the user should enable the plugin"
+  },
+
+  "siteWithThirdPartyCookies__true": {
+    "message": "Parece que te han instalado cookies de terceros a pesar de no aceptarlas.",
+    "description": "Short text explaining the user why the crown gets red"
+  },
+
+  "siteWithThirdPartyCookies__false": {
+    "message": "Parece que navegas sin cookies de terceros, disfrútalo.",
+    "description": "Short text explaining the user why the crown remains black"
   },
 
   "contributing": {
