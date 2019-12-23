@@ -3,6 +3,8 @@ import { css, jsx } from '@emotion/core';
 import { Check } from '../../components/Check';
 import PropTypes from 'prop-types';
 import { Section } from './components/Section';
+import { Site } from '../../../entities';
+import { StatusText } from './components/StatusText';
 import { Subtitle } from '../../components/Subtitle';
 import { Text } from '../../components/Text';
 import { Title } from '../../components/Title';
@@ -32,10 +34,6 @@ const check = css`
   top: 20px;
 `;
 
-const display = css`
-  font-weight: 700;
-`;
-
 const withLink = css`
   a {
     color: #4ccfa3;
@@ -49,11 +47,16 @@ const withLink = css`
  * @param {boolean} props.isEnabled
  * @param {boolean} props.loading
  * @param {object} props.onExtensionActivationChange
- * @param {import('../../intl').t} props.t
+ * @param {Site|null} props.site
+ * @param {typeof import('../../intl').t} props.t
  */
-export function MainPresentational({ isEnabled, loading, onExtensionActivationChange, t }) {
+export function MainPresentational({ isEnabled, loading, onExtensionActivationChange, site, t }) {
   if (loading) {
     return null;
+  }
+
+  if (!site) {
+    throw new Error('ERROR: A site is required to load the pop-up');
   }
 
   return (
@@ -66,7 +69,7 @@ export function MainPresentational({ isEnabled, loading, onExtensionActivationCh
       </header>
 
       <Section>
-        <Text css={display}>{t('howItWorks')}</Text>
+        <StatusText isEnabled={isEnabled} site={site} t={t} />
 
         <Text css={withLink} dangerouslySetInnerHTML={{ __html: t('contributing') }} />
       </Section>
@@ -82,5 +85,6 @@ MainPresentational.propTypes = {
   isEnabled: PropTypes.bool,
   loading: PropTypes.bool,
   onExtensionActivationChange: PropTypes.func.isRequired,
+  site: PropTypes.instanceOf(Site),
   t: PropTypes.func.isRequired,
 };

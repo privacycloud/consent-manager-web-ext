@@ -2,11 +2,12 @@ import { ExtensionManager } from '../../../managers/ExtensionManager';
 import { MainPresentational } from './presentational';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { SiteParser } from '../../utils/SiteParser';
 import { withTranslation } from '../../intl';
 
 /**
  * @typedef {object} Props
- * @prop {import('../../intl').t} t
+ * @property {typeof import('../../intl').t} t
  *
  * @extends {React.Component<Props>}
  */
@@ -29,15 +30,25 @@ class MainContainer extends React.Component {
        * @type {boolean}
        */
       loading: true,
+      /**
+       * @type {import('../../../entities').Site|null}
+       */
+      site: null,
     };
 
     this.onEnableChange = this.onEnableChange.bind(this);
   }
 
   async componentDidMount() {
+    const tabs = await browser.tabs.query({ currentWindow: true, active: true });
+
+    const site = new SiteParser().parse({
+      json: await browser.runtime.sendMessage({ type: 'getSite', tab: tabs[0] }),
+    });
+
     const isEnabled = await this.extensionManager.isExtensionEnabled();
 
-    this.setState({ isEnabled, loading: false });
+    this.setState({ isEnabled, loading: false, site });
   }
 
   render() {

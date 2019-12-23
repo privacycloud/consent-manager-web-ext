@@ -16,12 +16,22 @@
 
   "popupSubtitle": {
     "message": "Removes most cookie banners and declines consent by omission.",
-    "description": "First paragraph"
+    "description": "Subtitle for the popup"
   },
 
   "howItWorks": {
-    "message": "A red icon indicates that 3rd party cookies are nonetheless being served.",
-    "description": "Second paragraph"
+    "message": "Activate this extension to surf the web without annoying cookie pop-ups.",
+    "description": "Short text explaining why the user should enable the plugin"
+  },
+
+  "siteWithThirdPartyCookies__true": {
+    "message": "This site seems to be serving 3rd party cookies, which you never accepted.",
+    "description": "Short text explaining the user why the crown gets red"
+  },
+
+  "siteWithThirdPartyCookies__false": {
+    "message": "It seems that this site is not setting 3rd party cookies, enjoy it.",
+    "description": "Short text explaining the user why the crown remains black"
   },
 
   "contributing": {
