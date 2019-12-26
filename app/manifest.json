@@ -8,7 +8,7 @@
   "name": "Consent Manager",
   "short_name": "Consent Manager",
   "description": "__MSG_manifestDescription__",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "manifest_version": 2,
   "default_locale": "en",
   "background": {
