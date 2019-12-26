@@ -14,8 +14,8 @@
 The supported Node version for this project is specified at `.nvmrc`. To build this application, please follow the next steps:
 
 ```sh
-yarn # to install dependencies
-yarn build <chrome|firefox|opera|edge> # to build for the target vendor
+npm install # to install dependencies
+npm run build <chrome|firefox|opera|edge> # to build for the target vendor
 ```
 
 The resulted artefact will be located at `./packages/consent-manager-web-ext.<version>.<vendor>.*.zip`.
@@ -28,14 +28,14 @@ The resulted artefact will be located at `./packages/consent-manager-web-ext.<ve
 
 All the code is built on top of [`webextension-toolbox`](https://github.com/webextension-toolbox/webextension-toolbox).
 
-Dependencies are handled by `yarn` so to install the project just type `yarn` or `yarn install` on the project's root directory.
+Dependencies are handled by `npm` so to install the project just type `npm install` on the project's root directory.
 
 ### Run
 
 To run the project (in development) type:
 
 ```sh
-yarn dev <chrome|firefox|opera|edge>
+npm run dev <chrome|firefox|opera|edge>
 ```
 
 This will start a web server to provide hot-reloading functionality.
@@ -49,7 +49,7 @@ The project has also support for [`dotenv`](https://github.com/motdotla/dotenv),
 ### How to run tests
 
 ```sh
-yarn test
+npm run test
 ```
 
 ## License

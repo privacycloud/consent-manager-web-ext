@@ -13,9 +13,9 @@
     "dev": "webextension-toolbox dev",
     "lint": "eslint .",
     "test": "jest",
-    "test:watch": "yarn test --watch",
+    "test:watch": "npm run test --watch",
     "typecheck": "tsc --noEmit",
-    "verify": "yarn lint && yarn typecheck"
+    "verify": "npm run lint && npm run typecheck"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -58,7 +58,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn lint && yarn typecheck && yarn test"
+      "pre-push": "npm run lint && npm run typecheck && npm run test"
     }
   }
 }
