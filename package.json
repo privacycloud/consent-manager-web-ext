@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.7.4",
     "@privacycloud/prettierrc": "^2.0.0",
     "@testing-library/react": "^9.4.0",
