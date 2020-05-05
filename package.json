@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
-    "babel-plugin-emotion": "^10.0.23",
+    "babel-plugin-emotion": "^10.0.33",
     "lodash": "^4.17.15",
     "parse-domain": "^2.3.2",
     "prop-types": "^15.7.2",
