@@ -1,7 +1,7 @@
+import { fromUrl, parseDomain } from 'parse-domain';
 import { DomUtils } from './DomUtils';
 import { RulesFactory } from './rules';
 import { modifiers as cssModifiers } from './rules/cssModifiers';
-import parseDomain from 'parse-domain';
 
 export class ConsentOverlayRemover {
   constructor({ document }) {
@@ -10,16 +10,15 @@ export class ConsentOverlayRemover {
   }
 
   remove() {
-    const { domain, tld } = parseDomain(this.document.domain);
-    const normalizedDomain = `${domain}.${tld}`;
+    const { hostname } = parseDomain(fromUrl(this.document.domain));
 
-    const elements = this.utils.findElements(normalizedDomain);
+    const elements = this.utils.findElements(hostname);
 
     if (elements.length > 0) {
       this.utils.deleteElements(elements);
     }
 
-    const modifier = cssModifiers[normalizedDomain];
+    const modifier = cssModifiers[hostname];
 
     if (modifier) {
       const bodyElement = this.document.querySelector(`${modifier.element}`);

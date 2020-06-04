@@ -1,7 +1,7 @@
-import parseDomain from 'parse-domain';
+import { fromUrl, parseDomain } from 'parse-domain';
 
 export function getCleanDomain({ withTld = true, url }) {
-  const { domain, tld } = parseDomain(url);
+  const { domain, hostname } = parseDomain(fromUrl(url));
 
-  return withTld ? domain + '.' + tld : domain;
+  return withTld ? hostname : domain;
 }
