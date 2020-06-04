@@ -17,9 +17,6 @@ const styles = css`
   }
 `;
 
-/**
- * @param {React.DetailedHTMLProps<React.HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>} props
- */
 export function Text({ children, ...props }) {
   return (
     <p css={styles} {...props}>

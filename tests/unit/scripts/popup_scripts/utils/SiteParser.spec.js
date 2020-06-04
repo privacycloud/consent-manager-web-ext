@@ -2,9 +2,6 @@ import { Site } from '../../../../../app/scripts/entities';
 import { SiteParser } from '../../../../../app/scripts/popup_scripts/utils/SiteParser';
 
 describe('SiteParser', () => {
-  /**
-   * @type {object}
-   */
   let json;
 
   beforeEach(() => {

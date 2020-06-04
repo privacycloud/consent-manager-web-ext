@@ -41,15 +41,7 @@ const withLink = css`
     text-decoration: none;
   }
 `;
-/**
- *
- * @param {object} props
- * @param {boolean} props.isEnabled
- * @param {boolean} props.loading
- * @param {object} props.onExtensionActivationChange
- * @param {Site|null} props.site
- * @param {typeof import('../../intl').t} props.t
- */
+
 export function MainPresentational({ isEnabled, loading, onExtensionActivationChange, site, t }) {
   if (loading) {
     return null;

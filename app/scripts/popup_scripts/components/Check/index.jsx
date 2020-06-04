@@ -42,17 +42,6 @@ const icon = css`
   max-width: 150%;
 `;
 
-/**
- * @callback onChange
- * @param {React.ChangeEvent<HTMLInputElement>} event
- */
-
-/**
- * @param {object} props
- * @param {boolean} props.checked
- * @param {string} props.label
- * @param {onChange} props.onChange
- */
 export function Check({ checked, label, onChange }) {
   return (
     <label css={container}>

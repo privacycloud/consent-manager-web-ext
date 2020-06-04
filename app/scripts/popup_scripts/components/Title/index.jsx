@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
-
+import { css, jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 const style = css`
@@ -11,10 +10,6 @@ const style = css`
   font-weight: 900;
 `;
 
-/**
- * @param {object} props
- * @param {React.ReactNode} props.children
- */
 export function Title({ children }) {
   return <h1 css={style}>{children}</h1>;
 }

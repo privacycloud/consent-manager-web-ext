@@ -36,18 +36,6 @@ const loadingButton = css`
   pointer-events: none;
 `;
 
-/**
- * @callback onClick
- * @param  {React.MouseEvent} event
- */
-
-/**
- * @param {object} props
- * @param {React.ReactNode} props.children
- * @param {boolean} props.disabled
- * @param {boolean} [props.loading]
- * @param {onClick} props.onClick
- */
 export function Button({ children, disabled, loading, onClick, ...props }) {
   return (
     <button css={[style, loading && loadingButton]} disabled={disabled} onClick={onClick} {...props}>

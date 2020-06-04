@@ -1,8 +1,4 @@
 export class ContentBlocker {
-  /**
-   * @param {object} options
-   * @param {string[]} options.urlsToBlock
-   */
   constructor({ urlsToBlock }) {
     this.urlsToBlock = urlsToBlock;
   }

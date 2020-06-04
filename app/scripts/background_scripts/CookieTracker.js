@@ -6,10 +6,6 @@ const HEADER_NAME = {
 };
 
 export class CookieTracker {
-  /**
-   * @param {object} options
-   * @param {import('../entities').SiteRepository} options.repository
-   */
   constructor({ repository }) {
     this.repository = repository;
     this.tabHandler = new TabEventHandler({ repository });
@@ -37,10 +33,6 @@ export class CookieTracker {
         site.addCookie({ cookie: new Cookie({ url }) });
       },
       { urls: ['http://*/*', 'https://*/*'] },
-      // We still need to figure out how to extend default types with vendor specifics.
-      // Related to: https://github.com/kelseasy/web-ext-types/issues/90
-      //
-      // @ts-ignore
       VENDOR === 'chrome' ? onHeadersReceivedOptions.concat('extraHeaders') : onHeadersReceivedOptions,
     );
   }

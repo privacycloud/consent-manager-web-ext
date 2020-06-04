@@ -1,11 +1,6 @@
 import { SITE_EVENT } from '../entities';
 
 export class IconManager {
-  /**
-   * @param {object} options
-   * @param {import('../entities').Site} options.site
-   * @param {number} options.tabId
-   */
   constructor({ site, tabId }) {
     this.site = site;
     this.tabId = tabId;
@@ -35,9 +30,6 @@ export class IconManager {
     });
   }
 
-  /**
-   * @param {string} event
-   */
   on(event) {
     if (event === SITE_EVENT.COOKIE_ADDED && this.site.hasThirdPartyCookies()) {
       this.turnOn();

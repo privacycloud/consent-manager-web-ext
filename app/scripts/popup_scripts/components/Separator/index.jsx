@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 
 const styles = css`
   border: 1px solid #e3e3e3;

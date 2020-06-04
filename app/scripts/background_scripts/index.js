@@ -16,20 +16,13 @@ export async function start() {
     new TabEventListener({ repository }).start();
   }
 
-  browser.runtime.onMessage.addListener(
-    /**
-     * @param {object} request
-     * @param {string} [request.type]
-     * @param {browser.tabs.Tab} [request.tab]
-     */
-    ({ tab, type }) => {
-      if (type !== 'getSite' || !tab.id) {
-        return;
-      }
+  browser.runtime.onMessage.addListener(({ tab, type }) => {
+    if (type !== 'getSite' || !tab.id) {
+      return;
+    }
 
-      const site = repository.findByTabId(tab.id);
+    const site = repository.findByTabId(tab.id);
 
-      return Promise.resolve(site && site.toJSON());
-    },
-  );
+    return Promise.resolve(site && site.toJSON());
+  });
 }

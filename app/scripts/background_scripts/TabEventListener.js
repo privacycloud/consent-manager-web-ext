@@ -1,10 +1,6 @@
 import { TabEventHandler } from './TabEventHandler';
 
 export class TabEventListener {
-  /**
-   * @param {object} options
-   * @param {import('../entities').SiteRepository} options.repository
-   */
   constructor({ repository }) {
     this.repository = repository;
     this.tabHandler = new TabEventHandler({ repository });

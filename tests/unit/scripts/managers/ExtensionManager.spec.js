@@ -1,8 +1,5 @@
 import { ExtensionManager } from '../../../../app/scripts/managers/ExtensionManager';
 
-/**
- * @param {object} data
- */
 function stubBrowserExtensionStorage(data) {
   const browser = {
     storage: {
@@ -16,9 +13,6 @@ function stubBrowserExtensionStorage(data) {
 }
 
 describe('ExtensionManager', () => {
-  /**
-   * @type {ExtensionManager}
-   */
   let subject;
 
   beforeEach(() => {

@@ -12,13 +12,6 @@ const warning = css`
   color: red;
 `;
 
-/**
- *
- * @param {object} props
- * @param {boolean} props.isEnabled
- * @param {Site} props.site
- * @param {typeof import('../../../../intl').t} props.t
- */
 export function StatusText({ isEnabled, site, t }) {
   if (!isEnabled) {
     return <Text css={display}>{t('howItWorks')}</Text>;

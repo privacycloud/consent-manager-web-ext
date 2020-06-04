@@ -3,7 +3,6 @@
 - [Reporting & resolving issues](#reporting--resolving-issues)
   - [Did you find a bug?](#did-you-find-a-bug)
   - [Did you write a patch that fixes a bug?](#did-you-write-a-patch-that-fixes-a-bug)
-- [TypeScript](#typescript)
 
 ## Reporting & resolving issues
 
@@ -18,8 +17,3 @@
 1. Open a new GitHub pull request with the patch.
 1. Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
 1. Before submitting, please ensure that your changes follow the current coding conventions for this project and the test suite passes without errors. Most conventions are defined in [ESLint](.eslintrc.js) and [Prettier](.prettierrc.js) configuration files.
-
-## TypeScript
-
-This project uses the JavaScript language but gets type checking through TypeScript and JSDoc block comments. See [`tsconfig.json`](tsconfig.json) to undestand what compiler rules are enabled.
-

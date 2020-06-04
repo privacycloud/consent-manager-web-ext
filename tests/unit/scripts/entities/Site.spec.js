@@ -3,9 +3,6 @@ import { Cookie, SITE_EVENT, Site } from '../../../../app/scripts/entities';
 const SITE_URL = 'http://foo.bar';
 
 describe('Site', () => {
-  /**
-   * @type {Site}
-   */
   let site;
 
   beforeEach(() => {
@@ -101,9 +98,6 @@ describe('Site', () => {
   });
 
   describe('working with observers', () => {
-    /**
-     * @type {Observer}
-     */
     let observer;
 
     beforeEach(() => {

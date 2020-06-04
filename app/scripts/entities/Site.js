@@ -6,38 +6,16 @@ export const SITE_EVENT = {
 };
 
 export class Site {
-  /**
-   *
-   * @param {object} options
-   * @param {Array<import('./Cookie').Cookie>} [options.cookies]
-   * @param {string} options.url
-   */
   constructor({ cookies, url }) {
     if (null === url || typeof url === 'undefined') {
       throw new Error('Site is expected to have a primary url');
     }
 
-    /**
-     * @private
-     */
     this.cookies = new CookieCollection({ cookies });
-
-    /**
-     * @private
-     * @type {Observer[]}
-     */
     this.observers = [];
-
-    /**
-     * @private
-     */
     this.url = url;
   }
 
-  /**
-   * @param {object} options
-   * @param {import('./Cookie').Cookie} options.cookie
-   */
   addCookie({ cookie }) {
     this.cookies.add({ cookie });
 
@@ -48,10 +26,6 @@ export class Site {
     return this.cookies.hasThirdPartyCookiesFor({ url: this.url });
   }
 
-  /**
-   * @param {object} options
-   * @param {import('./Cookie').Cookie} options.cookie
-   */
   isThirdPartyCookie({ cookie }) {
     const isCookieIncluded = this.cookies.includes({ cookie });
 
@@ -66,10 +40,6 @@ export class Site {
     return this.cookies.length;
   }
 
-  /**
-   * @param {object} options
-   * @param {string} options.url
-   */
   hasThirdPartyCookiesFor({ url }) {
     return this.cookies.findBySubject({ url }).hasThirdPartyCookiesFor({ url: this.url });
   }
@@ -82,16 +52,10 @@ export class Site {
     return this.observers;
   }
 
-  /**
-   * @param {Observer} observer
-   */
   addObserver(observer) {
     this.observers.push(observer);
   }
 
-  /**
-   * @param {string} event
-   */
   notify(event) {
     this.observers.forEach((observer) => observer.on(event));
   }

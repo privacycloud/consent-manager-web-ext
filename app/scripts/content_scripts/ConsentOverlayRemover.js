@@ -4,10 +4,6 @@ import { modifiers as cssModifiers } from './rules/cssModifiers';
 import parseDomain from 'parse-domain';
 
 export class ConsentOverlayRemover {
-  /**
-   * @param {object} options
-   * @param {Document} options.document
-   */
   constructor({ document }) {
     this.document = document;
     this.utils = new DomUtils({ document, rules: RulesFactory() });
@@ -26,9 +22,6 @@ export class ConsentOverlayRemover {
     const modifier = cssModifiers[normalizedDomain];
 
     if (modifier) {
-      /**
-       * @type {HTMLElement|null}
-       */
       const bodyElement = this.document.querySelector(`${modifier.element}`);
 
       if (bodyElement) {

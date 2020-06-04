@@ -6,9 +6,6 @@ import tap from 'lodash/tap';
 
 describe('TabEventHandler', () => {
   describe('#onCreateTab', () => {
-    /**
-     * @type {SiteRepository}
-     */
     let repository;
 
     beforeAll(() => {

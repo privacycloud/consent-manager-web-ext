@@ -4,10 +4,7 @@ export class ExtensionManager {
 
     return !('browser-extension' in data) || data['browser-extension'] === true;
   }
-  /**
-   *
-   * @param {boolean} enabled
-   */
+
   async setStatusTo(enabled) {
     if (typeof enabled !== 'boolean') {
       throw new Error('Invalid argument');

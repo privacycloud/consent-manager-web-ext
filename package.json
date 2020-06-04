@@ -14,8 +14,7 @@
     "lint": "eslint .",
     "test": "jest",
     "test:watch": "npm run test --watch",
-    "typecheck": "tsc --noEmit",
-    "verify": "npm run lint && npm run typecheck"
+    "verify": "npm run lint"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -42,7 +41,6 @@
     "prettier": "^1.19.1",
     "react-test-renderer": "^16.12.0",
     "sinon-chrome": "^3.0.1",
-    "typescript": "^3.8.3",
     "web-ext-types": "^3.2.1",
     "webextension-toolbox": "^3.0.0"
   },
