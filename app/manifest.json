@@ -37,5 +37,5 @@
       "128": "images/production/grey_128.png"
     }
   },
-  "permissions": ["<all_urls>", "cookies", "storage", "tabs", "webRequest", "webRequestBlocking"]
+  "permissions": ["<all_urls>", "storage", "tabs", "webRequest", "webRequestBlocking"]
 }
