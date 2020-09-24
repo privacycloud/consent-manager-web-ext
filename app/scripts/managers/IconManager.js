@@ -1,7 +1,8 @@
 import { SITE_EVENT } from '../entities';
 
 export class IconManager {
-  constructor({ site, tabId }) {
+  constructor({ env = process.env.NODE_ENV, site, tabId }) {
+    this.env = env;
     this.site = site;
     this.tabId = tabId;
   }
@@ -10,10 +11,10 @@ export class IconManager {
     browser.browserAction.setIcon({
       tabId: this.tabId,
       path: {
-        '16': 'images/red_16.png',
-        '32': 'images/red_32.png',
-        '64': 'images/red_64.png',
-        '128': 'images/red_128.png',
+        '16': `images/${this.env}/red_16.png`,
+        '32': `images/${this.env}/red_32.png`,
+        '64': `images/${this.env}/red_64.png`,
+        '128': `images/${this.env}/red_128.png`,
       },
     });
   }
@@ -22,10 +23,10 @@ export class IconManager {
     browser.browserAction.setIcon({
       tabId: this.tabId,
       path: {
-        '16': 'images/grey_16.png',
-        '32': 'images/grey_32.png',
-        '64': 'images/grey_64.png',
-        '128': 'images/grey_128.png',
+        '16': `images/${this.env}/grey_16.png`,
+        '32': `images/${this.env}/grey_32.png`,
+        '64': `images/${this.env}/grey_64.png`,
+        '128': `images/${this.env}/grey_128.png`,
       },
     });
   }
@@ -33,10 +34,6 @@ export class IconManager {
   on(event) {
     if (event === SITE_EVENT.COOKIE_ADDED && this.site.hasThirdPartyCookies()) {
       this.turnOn();
-    }
-
-    if (event === SITE_EVENT.FORGOTTEN) {
-      this.turnOff();
     }
   }
 }

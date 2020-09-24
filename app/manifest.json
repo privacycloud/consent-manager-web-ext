@@ -16,10 +16,10 @@
     "persistent": true
   },
   "icons": {
-    "16": "images/grey_16.png",
-    "32": "images/grey_32.png",
-    "64": "images/grey_64.png",
-    "128": "images/grey_128.png"
+    "16": "images/production/grey_16.png",
+    "32": "images/production/grey_32.png",
+    "64": "images/production/grey_64.png",
+    "128": "images/production/grey_128.png"
   },
   "content_scripts": [
     {
@@ -31,10 +31,10 @@
     "default_title": "Consent Manager by PrivacyCloud",
     "default_popup": "pages/popup.html",
     "default_icon": {
-      "16": "images/grey_16.png",
-      "32": "images/grey_32.png",
-      "64": "images/grey_64.png",
-      "128": "images/grey_128.png"
+      "16": "images/production/grey_16.png",
+      "32": "images/production/grey_32.png",
+      "64": "images/production/grey_64.png",
+      "128": "images/production/grey_128.png"
     }
   },
   "permissions": ["<all_urls>", "cookies", "storage", "tabs", "webRequest", "webRequestBlocking"]
