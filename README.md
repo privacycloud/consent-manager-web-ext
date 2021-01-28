@@ -58,4 +58,4 @@ npm run test
 
 ## Copyright
 
-Copyright (c) 2020 [PrivacyCloud](https://privacycloud.com)
+Copyright (c) 2021 [PrivacyCloud](https://privacycloud.com)
